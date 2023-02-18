@@ -1,0 +1,26 @@
+{ 
+	"FileVersion": 3, 
+	"Version": 1, 
+	"VersionName": "1.0", 
+	"FriendlyName": "GameplayTags Component", 
+	"Description": "A component, that containing the FGameplayTag, and functions for working with it.", 
+	"Category": "Gameplay", 
+	"CreatedBy": "rionix", 
+	"CreatedByURL": "https://rionix.github.io", 
+	"DocsURL": "https://github.com/rionix/GameplayTagsComponent/wiki", 
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/202ef59ca875421da9e508725b94fb30", 
+	"SupportURL": "https://github.com/rionix/GameplayTagsComponent/issues", 
+	"CanContainContent": false, 
+	"IsBetaVersion": false, 
+	"IsExperimentalVersion": false, 
+	"Installed": false, 
+	"EngineVersion": "5.1.0", 
+	"Modules": [ 
+		{ 
+			"Name": "GameplayTagsComponent", 
+			"Type": "Runtime", 
+			"LoadingPhase": "Default", 
+			"WhitelistPlatforms": [ "Win64", "Android" ] 
+		} 
+	] 
+} 
