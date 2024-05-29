@@ -14,13 +14,13 @@
 	"IsBetaVersion": false, 
 	"IsExperimentalVersion": false, 
 	"Installed": false, 
-	"EngineVersion": "5.1.0", 
+	"EngineVersion": "4.27.0", 
 	"Modules": [ 
 		{ 
 			"Name": "GameplayTagsComponent", 
 			"Type": "Runtime", 
 			"LoadingPhase": "Default", 
-			"WhitelistPlatforms": [ "Win64", "Android" ] 
+			"WhitelistPlatforms": [ "Win64", "Android", "Linux" ] 
 		} 
 	] 
 } 

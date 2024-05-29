@@ -32,45 +32,45 @@ FGameplayTagContainer UGameplayTagsLibrary::GetGameplayTags(AActor* Actor)
 void UGameplayTagsLibrary::AddGameplayTag(AActor* Actor, FGameplayTag Tag)
 {
     if (UGameplayTagsComponent* Component = Get(Actor))
-        Component->GameplayTags.AddTag(Tag);
+        Component->AddTag(Tag);
 }
 
 void UGameplayTagsLibrary::AppendGameplayTags(AActor* Actor, FGameplayTagContainer Tags)
 {
     if (UGameplayTagsComponent* Component = Get(Actor))
-        Component->GameplayTags.AppendTags(Tags);
+        Component->AppendTags(Tags);
 }
 
-void UGameplayTagsLibrary::RemoveGameplayTag(AActor* Actor, FGameplayTag Tag)
+void UGameplayTagsLibrary::RemoveGameplayTag(AActor* Actor, FGameplayTag Tag, bool bExactMatch)
 {
     if (UGameplayTagsComponent* Component = Get(Actor))
-        Component->GameplayTags.RemoveTag(Tag);
+        Component->RemoveTag(Tag, bExactMatch);
 }
 
-void UGameplayTagsLibrary::RemoveGameplayTags(AActor* Actor, FGameplayTagContainer Tags)
+void UGameplayTagsLibrary::RemoveGameplayTags(AActor* Actor, FGameplayTagContainer Tags, bool bExactMatch)
 {
     if (UGameplayTagsComponent* Component = Get(Actor))
-        Component->GameplayTags.RemoveTags(Tags);
+        Component->RemoveTags(Tags, bExactMatch);
 }
 
 bool UGameplayTagsLibrary::HasGameplayTag(AActor* Actor, FGameplayTag Tag, bool bExactMatch)
 {
     if (UGameplayTagsComponent* Component = Get(Actor))
-        return bExactMatch ? Component->GameplayTags.HasTagExact(Tag) : Component->GameplayTags.HasTag(Tag);
+        return Component->HasTag(Tag, bExactMatch);
     return false;
 }
 
 bool UGameplayTagsLibrary::HasAnyGameplayTags(AActor* Actor, FGameplayTagContainer Tags, bool bExactMatch)
 {
     if (UGameplayTagsComponent* Component = Get(Actor))
-        return bExactMatch ? Component->GameplayTags.HasAnyExact(Tags) : Component->GameplayTags.HasAny(Tags);
+        return Component->HasAnyTags(Tags, bExactMatch);
     return false;
 }
 
 bool UGameplayTagsLibrary::HasAllGameplayTags(AActor* Actor, FGameplayTagContainer Tags, bool bExactMatch)
 {
     if (UGameplayTagsComponent* Component = Get(Actor))
-        return bExactMatch ? Component->GameplayTags.HasAllExact(Tags) : Component->GameplayTags.HasAll(Tags);
+        return Component->HasAllTags(Tags, bExactMatch);
     return false;
 }
 

@@ -33,10 +33,10 @@ public:
     static void AppendGameplayTags(AActor* Actor, FGameplayTagContainer Tags);
 
     UFUNCTION(BlueprintCallable, Category = "GameplayTags|TagsComponent", meta = (DisplayName = "Remove Gameplay Tag from Component"))
-    static void RemoveGameplayTag(AActor* Actor, FGameplayTag Tag);
+    static void RemoveGameplayTag(AActor* Actor, FGameplayTag Tag, bool bExactMatch = true);
 
     UFUNCTION(BlueprintCallable, Category = "GameplayTags|TagsComponent", meta = (DisplayName = "Remove Gameplay Tags from Component"))
-    static void RemoveGameplayTags(AActor* Actor, FGameplayTagContainer Tags);
+    static void RemoveGameplayTags(AActor* Actor, FGameplayTagContainer Tags, bool bExactMatch = true);
    
     UFUNCTION(BlueprintPure, Category = "GameplayTags|TagsComponent", meta = (DisplayName = "Has Gameplay Tag in Component"))
     static bool HasGameplayTag(AActor* Actor, FGameplayTag Tag, bool bExactMatch);

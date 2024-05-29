@@ -30,10 +30,10 @@ public:
     void AppendTags(FGameplayTagContainer Tags) { GameplayTags.AppendTags(Tags); }
 
     UFUNCTION(BlueprintCallable, Category = "GameplayTags|TagsComponent")
-    void RemoveTag(FGameplayTag Tag) { GameplayTags.RemoveTag(Tag); }
+    void RemoveTag(FGameplayTag Tag, bool bExactMatch = true);
 
     UFUNCTION(BlueprintCallable, Category = "GameplayTags|TagsComponent")
-    void RemoveTags(FGameplayTagContainer Tags) { GameplayTags.RemoveTags(Tags); }
+    void RemoveTags(FGameplayTagContainer Tags, bool bExactMatch = true);
 
     UFUNCTION(BlueprintPure, Category = "GameplayTags|TagsComponent")
     bool HasTag(FGameplayTag Tag, bool bExactMatch = false) const 
